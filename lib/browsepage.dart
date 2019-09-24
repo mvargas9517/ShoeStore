@@ -139,7 +139,23 @@ class _BrowsepageState extends State<Browsepage>
                 ],
               ),
             ),
-            SizedBox(height: 25.0),
+            SizedBox(height: 35.0),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 30.0),
+              child: Material(
+                elevation: 5.0,
+                borderRadius: BorderRadius.all(Radius.circular(30.0),),
+                child: TextField(
+                  textAlign: TextAlign.center,
+                  decoration: InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 12.0),
+                    border: InputBorder.none,
+                    labelText: 'Search', 
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 33.0),
             Padding(
               padding: EdgeInsets.only(left: 30.0),
               child: Text(

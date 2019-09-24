@@ -93,7 +93,7 @@ class _ShoeScreenState extends State<ShoeScreen> {
                   ),
                   Positioned(
                     right: 40.0,
-                    bottom: 30.0,
+                    bottom: 40.0,
                     child: Hero(
                       tag: widget.shoe.imageUrl,
                       child: Image(
@@ -107,7 +107,7 @@ class _ShoeScreenState extends State<ShoeScreen> {
                 ],
               ),
               Container(
-                height: 520.0,
+                height: 500.0,
                 transform: Matrix4.translationValues(0.0, -20.0, 0.0),
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -119,14 +119,14 @@ class _ShoeScreenState extends State<ShoeScreen> {
                     Padding(
                       padding: EdgeInsets.only(
                         left: 30.0,
-                        right: 100.0,
+                        right: 85.0,
                         top: 35.0,
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text(
-                            'Description',
+                            'Description:',
                             style: TextStyle(
                               fontSize: 28.0,
                               fontWeight: FontWeight.w700,
@@ -140,29 +140,46 @@ class _ShoeScreenState extends State<ShoeScreen> {
                               fontSize: 20.0,
                             ),
                           ),
+                          SizedBox(height: 30),
+                          Row(
+                            children: <Widget>[
+                              Text('Colorway:',
+                              style: TextStyle(
+                                color: Colors.black87,
+                                fontSize: 28.0,
+                                fontWeight: FontWeight.w700
+                              ),),
+                          SizedBox(width: 15),
+                              Text(widget.shoe.colorway,
+                          style: TextStyle(
+                            color: Colors.black87,
+                            fontSize: 28.0,
+                            fontWeight: FontWeight.w400
+                          ),),
+                            ],
+                          ),
                         ],
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.symmetric(
                         horizontal: 30.0,
-                        vertical: 40.0,
+                        vertical: 30.0,
                       ),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          SizedBox(height: 15.0,),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(0,25.0,0,0),
                             child: Text(
                               'Add to cart:',
                               style: TextStyle(
                                 fontSize: 28.0,
-                                fontWeight: FontWeight.w600
+                                fontWeight: FontWeight.w700
                               ),
                             ),
                           ),
-                          SizedBox(width: 40.0,),
+                          SizedBox(width: 35.0,),
                           RawMaterialButton(
                             padding: EdgeInsets.all(25.0),
                             shape: CircleBorder(),
